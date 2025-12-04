@@ -1,0 +1,15 @@
+PermitRootLogin yes
+ChallengeResponseAuthentication yes 
+#UsePAM yes
+
+X11Forwarding yes
+X11DisplayOffset 20 
+X11UseLocalhost no 
+PrintMotd no
+
+AcceptEnv LANG LC_*
+
+HostKey /opt/openssh/etc/ssh_host_ecdsa_key
+HostKey /opt/openssh/etc/ssh_host_rsa_key
+HostKey /opt/openssh/etc/ssh_host_ed25519_key
+Subsystem	sftp	/opt/openssh/libexec/sftp-server
