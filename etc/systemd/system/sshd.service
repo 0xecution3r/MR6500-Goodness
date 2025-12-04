@@ -1,0 +1,13 @@
+[Unit]
+Description=OpenSSH Daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/openssh/sbin/sshd -D -f /opt/openssh/etc/sshd_config
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
+
